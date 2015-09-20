@@ -1,0 +1,2 @@
+[13-Aug-2015 12:55:43] PHP Warning:  readfile(../LICENSE.txt) [<a href='function.readfile'>function.readfile</a>]: failed to open stream: No such file or directory in /home/etransla/public_html/chineseproperties.com.au/advertising/admin/install.php on line 502
+[13-Aug-2015 14:34:26] No response received from server.

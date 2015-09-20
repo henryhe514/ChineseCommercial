@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="{load_meta_keywords_raw}" />
+<meta name="description" content="{load_meta_description_raw}" />
+{load_css_style}
+{load_css_editor}
+<title>{site_title}</title>
+{load_js}
+{license_tag}
+<link rel="alternate" type="application/rss+xml" title="{company_name} - {lang_rss_lastmodified_link_title}" href="index.php?action=rss_lastmodified_listings" />
+<link rel="alternate" type="application/rss+xml" title="{company_name} - {lang_rss_featured_link_title}" href="index.php?action=rss_featured_listings" />
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
+
+</head>
+<body>
+<!-- header + menu starts -->
+
+<div id="header">
+	<div id="menu_container">
+		<div id="logo">
+			<div id="nav">
+				<a href="{url_index}" title="Buy a Business"><b>Buy 购买生意</b></a>                
+				<a href="{page_link_2}" title="Sell a Business"><b>Sell 出售生意</b></a>
+				<a href="{page_link_3}" title="Value a Business"><b>Value 生意估价</b></a>
+				<a href="{page_link_5}" title="Contact Us"><b>Contact Us 联系我们</b></a>                               
+<!--				<a href="{url_blog}" title="News"><b>News 新闻</b></a>  -->
+				{check_guest}
+				<a href="{url_agent_signup}" title="Member Signup"><b>Signup 注册</b></a>
+				<a href="/index.php?action=page_display&PageID=8" title="Member Login"><b>Login 登录</b></a>
+                <!--{url_agent_login}-->
+				{/check_guest}
+			</div>
+			<div id="navm">
+				{check_member} 
+				<a href="{url_edit_profile}" title="My Profile"><b>My Profile 查看我的主页</b></a>
+<!--				<a href="{url_view_favorites}" title="My Favorites"><b>Favorites</b></a>
+				<a href="{url_view_saved_searches}" title="My Searches"><b>Searches</b></a> -->
+				<a href="{url_logout}" title="Logout"><b>Logout 登出</b></a>
+				{/check_member}
+			</div>
+		</div>
+	</div>
+</div>
+<!-- header + menu ends -->
+<a href="http://chinesecommercial.com.au">
+   <img src="{template_url}/images/chinesecommercialbanner.png" width="870">
+</a>
+<!-- container start -->
+<div id="container">
+	<!-- left box start -->
+	<div id="lefto">
+		<!-- search box starts -->
+		<div id="banner">
+			<div class="blokbox">
+				<h2><span>Search 生意搜寻</span></h2>
+				<div class="blokcontent">
+				<form action="index.php" method="get">
+				<input type="hidden" name="price-min" value="0">
+				<input type="hidden" name="action" value="searchresults">
+				<input type="hidden" name="pclass[]" value="">
+				<table border=0 cellpadding="0" cellspacing="0" width="100%">
+					<tr align="center">
+						<td><input name="searchtext" type="text" size="17" placeholder="Keywords 关键词"></td>
+					</tr>
+					<tr align="center">
+						<td><select name="state" style="width:120px;">
+							<option value="">State 生意所在地</option>
+							<option value="NSW">NSW 新南威尔士州</option>
+							<option value="VIC">VIC 维多利亚州</option>
+							<option value="QLD">QLD 昆士兰州</option>
+							<option value="WA">WA 西澳大利亚</option>
+							<option value="SA">SA 南澳大利亚</option>
+							<option value="NT">NT 北领地</option>
+							<option value="ACT">ACT 堪培拉</option>
+							<option value="TAS">TAS 塔斯马尼亚</option>
+							</select></td>
+					</tr>
+                    <tr align="center">
+						<td><select name="pclass[]" style="width:120px;">
+							<option value="">Type 业务种类</option>                       
+							<option value="1" title="Accomodation">Accomodation 住宿 </option>
+            				<option value="2" title="Advertising">Advertising 广告 </option>
+            				<option value="3" title="Automotive">Automotive 汽车/机械 </option>
+            				<option value="4" title="Beauty/Massage">Beauty 美容/按摩 </option>
+            				<option value="5" title="Education/Training">Education 教育 </option>
+            				<option value="6" title="Entertainment/Video/KTV">Entertainment 娱乐/媒体制作/KTV </option>
+            				<option value="7" title="Duty Free">Duty Free 免税商铺 </option>
+            				<option value="8" title="Financial">Finance 财经 </option>
+            				<option value="9" title="Fashion/Clothing/Shoes">Fashion 时装/成衣/零售 </option>
+            				<option value="10" title="Fast Food/Restaurant/Cafe">Food 食品/餐馆/咖啡馆 </option>
+            				<option value="11" title="Franchise">Franchise 特许经营连锁店 </option>
+            				<option value="12" title="Gaming and Internet Cafe">Internet 博彩业/网吧 </option>
+            				<option value="13" title="Health Food">Health Food 健康食品/保健品 </option>
+            				<option value="14" title="Home/Garden">Home and Garden 家居 </option>
+            				<option value="15" title="Insurance">Insurance 保险 </option>
+            				<option value="16" title="Import/Export">Import Export 进出口 </option>
+            				<option value="17" title="Industrial/Manufacturing">Industrial 工业/制造业 </option>
+            				<option value="18" title="Medical">Medical 医药 </option>
+           					<option value="19" title="Media and Newspaper">Media 媒体/报纸 </option>
+            				<option value="20" title="Professional services">Pro Services 专业服务 </option>
+            				<option value="21" title="Retail">Retail 零售 </option>
+            				<option value="22" title="Services">Services 服务 </option>
+            				<option value="23" title="Real Estate">Real Estate 房地产 </option>
+            				<option value="24" title="Tourism">Tourism 旅游业 </option>
+            				<option value="25" title="Translation">Translation 翻译 </option>
+            				<option value="26" title="Transportation">Transport 交通运输 </option>
+            				<option value="27" title="Other">Other 其他 </option>
+							</select></td>
+					</tr>
+
+					<tr align="center">
+						<td><select name="price-max" style="width:120px;">
+						<option value="100000">&lt; $100,000</option>
+						<option value="250000">&lt; $250,000</option>
+						<option value="500000">&lt; $500,000</option>
+						<option value="750000">&lt; $750,000</option>
+						<option value="1000000">$1,000,000 +</option>
+						<option value="5000000000000" selected title="Business Value">Value 价钱</option>
+						</select></td>
+					</tr>					
+					<tr align="center"><td align="center"><input type="submit" value="Go 搜索"><td></tr>
+				</table>
+				</form>
+				</div>
+				<div class="blokfooter">
+					<div>&nbsp;</div>
+				</div>
+			</div>
+		</div>
+		<!-- searchbox ends -->	
+      
+		<!-- menu starts -->
+		<div id="navigation">
+			<div class="blokbox">
+				<h2><span>Business Listing</span></h2>
+				<div class="blokcontent">
+					<ul class="menu">
+                     <!--
+						<li class="menu"><a href="{url_blog}" title="View Blog">Business News</a></li>                       
+						<li class="menu"><a href="{url_search}" title="Search Listings">Search Listings</a></li>
+						<li class="menu"><a href="{url_search_rental}" title="Rental Search">Search Rentals</a></li>
+                        -->
+						<li class="menu"><a href="{url_search_results}" title="View All Listings">View All 查看所有列表</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=1" title="Accomodation">Accomodation 住宿</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=2" title="Advertising">Advertising 广告</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=3" title="Automotive">Automotive 汽车/机械</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=4" title="Beauty/Massage">Beauty 美容/按摩</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=5" title="Education/Tutoring">Education 教育</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=6" title="Entertainment/Video/KTV">Entertainment 娱乐/媒体制作/KTV</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=7" title="Duty Free">Duty Free 免税商铺</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=8" title="Financial">Finance 财经</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=9" title="Fashion/Clothing/Stores">Fashion 时装/成衣/零售</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=10" title="Food/Restaurant">Food 食品/餐馆/咖啡馆</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=11" title="Franchise">Franchise 特许经营连锁店</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=12" title="Gaming and Internet Cafe">Internet 博彩业/网吧</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=28" title="Groceries/Asian Grocer">Grocery 杂货/亚洲杂货</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=13" title="Health Food">Health Food 健康食品/保健品</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=14" title="Home and Garden">Home and Garden 家居</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=15" title="Insurance">Insurance 保险</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=16" title="Import/Export">Import and Export 进出口</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=17" title="Industry/Manufacturing">Industrial 工业/制造业</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=18" title="Medical">Medical 医药</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=19" title="Media and Newspaper">Media 媒体/报纸</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=20" title="Professional services">Pro Services 专业服务</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=21" title="Retail">Retail 零售</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=22" title="Services">Services 服务</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=23" title="Real Estate">Real Estate 房地产</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=24" title="Tourism">Tourism 旅游业</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=25" title="Translation">Translation 翻译</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=26" title="Transportation">Transport 交通运输</a></li>
+						<li class="menu"><a href="{baseurl}/index.php?action=searchresults&amp;pclass[]=27" title="Other">Other 其他</a></li>
+					</ul>
+                    
+				</div>
+				<div class="blokfooter">
+					<div>&nbsp;</div>
+				</div>
+			</div>
+		</div>
+		<!-- menu ends -->
+       
+		<div id="searchbystate">
+			<div class="blokbox">
+				<h2><span>State 生意所在地</span></h2>
+				<div class="blokcontent" style="text-align:center;">
+                	<ul class="menu">
+                    	<li class="menu"><a href="{baseurl}/index.php?action=searchresults&state=NSW">NSW 新南威尔士州</a></li>
+                    	<li class="menu"><a href="{baseurl}/index.php?action=searchresults&state=VIC">VIC 维多利亚州</a></li>
+                    	<li class="menu"><a href="{baseurl}/index.php?action=searchresults&state=QLD">QLD 昆士兰州</a></li>
+                    	<li class="menu"><a href="{baseurl}/index.php?action=searchresults&state=WA">WA 西澳大利亚</a></li>
+                    	<li class="menu"><a href="{baseurl}/index.php?action=searchresults&state=SA">SA 南澳大利亚</a></li>
+                    	<li class="menu"><a href="{baseurl}/index.php?action=searchresults&state=ACT">ACT 堪培拉</a></li>
+                    	<li class="menu"><a href="{baseurl}/index.php?action=searchresults&state=NT">NT 北领地</a></li>
+                    	<li class="menu"><a href="{baseurl}/index.php?action=searchresults&state=TAS">TAS 塔斯马尼亚</a></li>
+                    </ul>
+                </div>
+				<div class="blokfooter">
+					<div>&nbsp;</div>
+				</div>
+			</div>
+		</div>        
+
+		<!-- Featured listings vertical starts -->
+		<div id="fvertical">
+			<div class="blokbox">
+				<h2><span>Featured 企业名单</span></h2>
+				<div class="blokcontent" style="text-align:center;">{featured_listings_vertical}</div>
+				<div class="blokfooter">
+					<div>&nbsp;</div>
+				</div>
+			</div>
+		</div>
+		<!-- Featured listings vertical ends -->
+
+	</div>
+	<!-- left box ends -->
+    
+	<!-- right box start -->
+	<div id="righto">
+
+		<!-- featured listings horizontal -->
+		<div id="fhorizon">
+			<div class="blokbox">
+				<h2><span>Business Advice 业务咨询</span></h2>
+				<div class="blokcontent">
+                
+                <table width=100%>
+                	<tr valign="top">
+                    	<td valign="top">
+                    	<h3><a href="{baseurl}/index.php">Selling your Business?</a></h3>
+                        <p>
+                        Ensure you are well prepared, follow our check list <br/>
+                        考虑出售你的生意？
+						请参考我们的简易步骤，轻松做好出售准备！ <a href="#">详情&raquo;</a></p>
+                    	</td>
+                    	<td valign="top">
+                    	<h3><a href="{baseurl}/index.php?action=page_display&PageID=2">Buying a business?</a></h3>
+                        <p> Find one that really suits you, follow our guide<br/> 
+                        考虑购买生意？ 搜寻一个真正适合你的行业及经营模式，查看我们的购买手册以获取更多有用资讯！<a href="#">详情&raquo;</a></p>
+                    	</td>
+                    	<td valign="top">
+                    	<h3><a href="{baseurl}/index.php?action=page_display&PageID=3">Evaluating a business? </a></h3>
+                        <p>Try our experts <br/> 
+                        想知道你生意的市值？ 和我们的专家谈谈！<a href="#">详情&raquo;</a></p>
+                    	</td>                        
+                    </tr>
+                </table>
+
+                </div>
+				<div class="blokfooter">
+					<div>&nbsp;</div>
+				</div>
+			</div>
+		</div>
+		<!-- featured listings horizontal ends -->
+        <div id="banner">
+        {horizontal_header_banner}
+        </div>
+		<!-- main content starts -->
+		<div id="content">
+			<div class="blokbox">
+				<h2><span></span></h2>
+				<div class="blokcontentmain">
+                	{content}
+                </div>
+				<div class="blokfooter">
+					<div>&nbsp;</div>
+				</div>
+			</div>
+		</div>
+		<!-- main content ends -->
+
+	</div>
+	<!-- right box ends -->
+	<!-- Footer starts -->
+	<div id="footer" style="line-height:normal;">
+    					<a href="{url_index}" title="Buy a Business">Buy 购买生意</a> |               
+						<a href="{page_link_2}" title="Sell a Business">Sell 出售生意</a> |
+						<a href="{page_link_3}" title="Value a Business">Value 生意估价</a> |
+						<a href="{page_link_5}" title="Contact Us">Contact Us 联系我们</a> |    
+						<a href="/index.php?action=searchresults&amp;pclass[]=1" title="Accomodation">Accomodation 住宿</a> | 
+						<a href="/index.php?action=searchresults&amp;pclass[]=2" title="Advertising">Advertising 广告</a> | 
+						<a href="/index.php?action=searchresults&amp;pclass[]=3" title="Automotive">Automotive 汽车/机械</a> |
+						<a href="/index.php?action=searchresults&amp;pclass[]=4" title="Beauty/Massage">Beauty 美容/按摩</a> |
+						<a href="/index.php?action=searchresults&amp;pclass[]=5" title="Education/Tutoring">Education 教育</a> |
+						<a href="/index.php?action=searchresults&amp;pclass[]=6" title="Entertainment/Video/KTV">Entertainment 娱乐/媒体制作/KTV</a> |
+						<a href="/index.php?action=searchresults&amp;pclass[]=7" title="Duty Free">Duty Free 免税商铺</a> |
+						<a href="/index.php?action=searchresults&amp;pclass[]=8" title="Financial">Finance 财经</a> |
+						<a href="/index.php?action=searchresults&amp;pclass[]=9" title="Fashion/Clothing/Stores">Fashion 时装/成衣/零售</a> |
+						<a href="/index.php?action=searchresults&amp;pclass[]=10" title="Food/Restaurant">Food 食品/餐馆/咖啡馆</a> |
+						<a href="/index.php?action=searchresults&amp;pclass[]=11" title="Franchise">Franchise 特许经营连锁店</a> |
+						<a href="/index.php?action=searchresults&amp;pclass[]=12" title="Gaming and Internet Cafe">Internet 博彩业/网吧</a> |
+						<a href="/index.php?action=searchresults&amp;pclass[]=28" title="Groceries/Asian Grocer">Grocery 杂货/亚洲杂货</a> |
+						<a href="/index.php?action=searchresults&amp;pclass[]=13" title="Health Food">Health Food 健康食品/保健品</a> |
+						<a href="/index.php?action=searchresults&amp;pclass[]=14" title="Home and Garden">Home and Garden 家居</a> |
+						<a href="/index.php?action=searchresults&amp;pclass[]=15" title="Insurance">Insurance 保险</a> |
+						<a href="/index.php?action=searchresults&amp;pclass[]=16" title="Import/Export">Import and Export 进出口</a> |
+						<a href="/index.php?action=searchresults&amp;pclass[]=17" title="Industry/Manufacturing">Industrial 工业/制造业</a> |
+						<a href="/index.php?action=searchresults&amp;pclass[]=18" title="Medical">Medical 医药</a> |
+						<a href="/index.php?action=searchresults&amp;pclass[]=19" title="Media and Newspaper">Media 媒体/报纸</a> |
+						<a href="/index.php?action=searchresults&amp;pclass[]=20" title="Professional services">Pro Services 专业服务</a> |
+						<a href="/index.php?action=searchresults&amp;pclass[]=21" title="Retail">Retail 零售</a> |
+						<a href="/index.php?action=searchresults&amp;pclass[]=22" title="Services">Services 服务</a> |
+						<a href="/index.php?action=searchresults&amp;pclass[]=23" title="Real Estate">Real Estate 房地产</a> |
+						<a href="/index.php?action=searchresults&amp;pclass[]=24" title="Tourism">Tourism 旅游业</a> |
+						<a href="/index.php?action=searchresults&amp;pclass[]=25" title="Translation">Translation 翻译</a> |
+						<a href="/index.php?action=searchresults&amp;pclass[]=26" title="Transportation">Transport 交通运输</a> |
+						<a href="/index.php?action=searchresults&amp;pclass[]=27" title="Other">Other 其他</a>
+		<!-- <span style="vertical-align:middle;"><img class="img" src="{template_url}/images/feed-icon-14x14.png" alt="" /></span><a href="index.php?action=rss_featured_listings" >{lang_rss_featured_link_title}</a> | <span style="vertical-align:middle;"><img class="img" src="{template_url}/images/feed-icon-14x14.png" alt=""/></span> <a href="index.php?action=rss_lastmodified_listings" >{lang_rss_lastmodified_link_title}</a> -->
+	</div>
+	<!-- Footer ends -->
+</div>
+<!-- container ends -->
+
+{load_js_last}
+</body>
+</html>
+
+
